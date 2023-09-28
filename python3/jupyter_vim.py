@@ -301,7 +301,7 @@ class JupyterVimSession():
         def is_cell_separator(line):
             """Check if given line is a cell separator."""
             for separation in cell_separators:
-                if re.match(separation, line):
+                if re.match(separation, line.strip()):
                     return True
             return False
 
